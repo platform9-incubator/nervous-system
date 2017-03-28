@@ -1,0 +1,9 @@
+[template]
+src = 'imagelibrary.conf'
+dest = '/etc/pf9/imagelibrary/imagelibrary.conf'
+owner = 'pf9'
+mode = '0644'
+keys = [
+    '/passwords/glance'
+]
+reload_cmd = 'service pf9-imagelibrary restart'

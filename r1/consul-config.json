@@ -1,0 +1,13 @@
+{
+    "server": true,
+    "log_level": "DEBUG",
+    "data_dir": "/root/consul-data",
+    "bootstrap_expect": 3,
+    "advertise_addr": "52.53.53.62",
+    "watches": [{
+        "type": "keyprefix",
+        "prefix": "passwords/",
+        "handler": "/root/update-password.py"
+    }]
+}
+        

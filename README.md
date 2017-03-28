@@ -5,11 +5,12 @@
 This repo contains config files, code and notes describing a proof-of-concept for using [Hashicorp's Consul](https://www.consul.io/) and [confd](https://github.com/kelseyhightower/confd) as a configuration manager for Platform9 clouds.
 
 ## Problem
-As a demonstration, I'm using the example of a sudden requirement to update the glance keystone password. Glance (like all of our api services) uses a dedicated user/password to authentication with keystone in order to validate tokens it receives from api clients. The user associated with this password is an admin on the services project, so if the password is somehow compromised, we'd need to change it in a hurry.
+As a demonstration, I'm using the example of a sudden requirement to update the glance keystone password. Glance (like all of our api services) uses a dedicated user/password to authenticate with keystone in order to validate tokens it receives from api clients. The user associated with this password is an admin on the services project, so if the password is somehow compromised, we'd need to change it in a hurry.
 
 This password is used both on DUs and imagelibrary role hosts, and in both cases it's needed in multiple configuration files. To change it, we'd need to:
 * modify the password in keystone
 * update the password in the glance-api and glance-registry configuration files on all regions.
+* restart all the DU-side glance services.
 * push a new configuration to each host where the password is stored in both the imagelibrary and glance-api service configurations.
 
 With our current configuration methods, we'd need to update the password in mongo, and write a special-purpose ansible playbook to update the password in keystone and all the region glance configs. Note that this special playbook would duplicate logic in both the glance and keystone configuration playbooks. Any updates to the structure of the original configuration, e.g. a pull from openstack upstream, would require this extra playbook to be updated as well.

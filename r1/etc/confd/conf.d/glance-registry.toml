@@ -1,0 +1,9 @@
+[template]
+src = 'glance-registry.conf'
+dest = '/etc/glance/glance-registry.conf'
+owner = 'glance'
+mode = '0644'
+keys = [
+    '/passwords/glance'
+]
+reload_cmd = 'systemctl restart pf9-glance-registry'

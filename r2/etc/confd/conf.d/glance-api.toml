@@ -1,0 +1,9 @@
+[template]
+src = 'glance-api.conf'
+dest = '/etc/glance/glance-api.conf'
+owner = 'glance'
+mode = '0644'
+keys = [
+    '/passwords/glance'
+]
+reload_cmd = 'systemctl restart pf9-glance-api'
