@@ -47,3 +47,10 @@ A more complete proof of concept would include:
 
 ## Proposal
 Let's do all hosted and on-premise service configuration this way! Also, explore using consul, etc to start, watch and manage services, help with health checking and endpoint discovery.
+
+## Consul References:
+* [Securing Consul](https://www.mauras.ch/securing-consul.html)
+* [Turning on ACL's in our Consul cluster](http://jovandeginste.github.io/2016/05/04/turning-on-acl-s-in-our-consul-cluster.html)
+* [Consul Encryption (Docs)](https://www.consul.io/docs/agent/encryption.html)
+* [Digital Ocean etcd/confd/coreos](https://www.digitalocean.com/community/tutorials/how-to-use-confd-and-etcd-to-dynamically-reconfigure-services-in-coreos)
+* [Consul iptables rules](http://blog.alexey-plotnik.me/2016/05/23/consul/)
