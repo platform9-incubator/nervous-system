@@ -54,3 +54,4 @@ Let's do all hosted and on-premise service configuration this way! Also, explore
 * [Consul Encryption (Docs)](https://www.consul.io/docs/agent/encryption.html)
 * [Digital Ocean etcd/confd/coreos](https://www.digitalocean.com/community/tutorials/how-to-use-confd-and-etcd-to-dynamically-reconfigure-services-in-coreos)
 * [Consul iptables rules](http://blog.alexey-plotnik.me/2016/05/23/consul/)
+* [hashicorp consul-template on github](https://github.com/hashicorp/consul-template): a hashicorp alternative to confd. Looks like it's more full featured. May try in the future.
